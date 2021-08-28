@@ -1,0 +1,156 @@
+.header-section {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+.header {
+	display: grid;
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+.menu a {
+	color: black;
+	font-size: 20px;
+	padding: 7px 17px;
+	margin:0px 20px;
+	border: solid 2px black;
+	border-radius: 9px;
+	text-decoration: none;
+}
+.menu {
+	grid-column: 4/5;
+	margin-top: 40px;
+	text-align: center;
+}
+.logo {
+	grid-column: 1/2;
+	margin-top: 15px;
+	text-align: center;
+}
+.menu a:hover {
+	background: linear-gradient(to right, #69b87f, #35b393, #009ac4);
+	color: white;
+	text-decoration: none;
+	border-color: white;
+}
+
+.body {
+  height: 100%;
+  margin-top: 100px;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.slideshow .slider {
+  width: 100vw;
+  height: 100vw;
+  z-index: 2;
+}
+.slideshow .slider * {
+  outline: none;
+}
+.slideshow .slider .item {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.slideshow .slider .item .text {
+  display: none;
+}
+.slideshow .slider .item img {
+  min-width: 101%;
+  min-height: 101%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.slideshow .slick-dots {
+  position: fixed;
+  z-index: 100;
+  width: 40px;
+  height: auto;
+  bottom: auto;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: auto;
+  color: #fff;
+  display: block;
+}
+.slideshow .slick-dots li {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.slideshow .slick-dots li button {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  text-align: center;
+}
+.slideshow .slick-dots li button:before {
+  content: "";
+  background: #69b87f;
+  color: #fff;
+  height: 3px;
+  width: 30px;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
+}
+.slideshow .slick-dots li.slick-active button:before {
+  background: #009ac4;
+  width: 50px;
+  opacity: 1;
+}
+.slideshow.slideshow-right {
+  left: 0;
+  z-index: 1;
+  width: 50vw;
+  pointer-events: none;
+}
+.slideshow.slideshow-right .slider {
+  left: 0;
+  position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu a{
+    margin-top: 20px;
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 70px;
+  color: black;
+  }
+.demo0 {
+  width: 100%;
+  height: 250px;
+}
